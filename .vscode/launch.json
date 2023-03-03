@@ -1,0 +1,103 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Ex1",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build1",
+            "program": "${workspaceFolder}/Ex1/bin/Debug/net6.0/Ex1.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Ex1",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+        {
+            "name": "Run Ex2",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build2",
+            "program": "${workspaceFolder}/Ex2/bin/Debug/net6.0/Ex2.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Ex2",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+        {
+            "name": "Run Ex3",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build3",
+            "program": "${workspaceFolder}/Ex3/bin/Debug/net6.0/Ex3.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Ex3",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+        {
+            "name": "Run Ex4",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build4",
+            "program": "${workspaceFolder}/Ex4/bin/Debug/net6.0/Ex4.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Ex4",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+        {
+            "name": "Run Ex5",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build5",
+            "program": "${workspaceFolder}/Ex5/bin/Debug/net6.0/Ex5.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Ex5",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+        {
+            "name": "Run Ex6",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build6",
+            "program": "${workspaceFolder}/Ex6/bin/Debug/net6.0/Ex6.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Ex6",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+        {
+            "name": "Run Ex8",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build8",
+            "program": "${workspaceFolder}/Ex8/bin/Debug/net6.0/Ex8.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Ex8",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+    ]
+}
+
+
+
+
+
+
+
