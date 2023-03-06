@@ -13,7 +13,7 @@ namespace exercicio4
         {
             this.Email = email;
             this.Nome = nome;
-            this.Senha = Guid.NewGuid();
+            this.Senha = Guid.NewGuid().ToString();
         }
     }
     public class Program
