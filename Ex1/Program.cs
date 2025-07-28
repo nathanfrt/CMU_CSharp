@@ -1,22 +1,23 @@
-﻿using System.Linq;
+﻿using Ex1;
 
 namespace exercicio1
 {
     public class Program
     {
-        public static List<string> FiltraTerminadasEmA(List<string> array)
-        {
-            // Coloque seu código aqui
-            return null;
-        }
-
         public static void Main(string[] args)
         {
-            // Exemplos para teste. Sinta-se à vontade para completar com outros testes!
+            var biblioteca = new Biblioteca();
+            Console.WriteLine("\nPalavras terminadas em A");
+            biblioteca.FiltraTerminadasEmA(new List<string> { "Pera", "Maçã", "Banana", "Uva", "Abacate" });
 
-            FiltraTerminadasEmA(new List<string> {"Pera", "Maçã", "Banana", "Uva", "Abacate"}); // new List<string> {"Pera", "Banana", "Uva"}
-            FiltraTerminadasEmA(new List<string> {"BANANA", "AZEITE", "Sacola", "MERCADO"}); // new List<string> {"BANANA", "Sacola"}
-            FiltraTerminadasEmA(new List<string> {}); // new List<string> {}
+            Console.WriteLine("\nPalavras não terminadas em A");
+            biblioteca.FiltraTerminadasEmA(new List<string> { "Caderno", "Corretivo", "Computador", "Lápis", "Marcador" });
+
+            Console.WriteLine("\nPalavras terminadas em número ou caracteres especiais");
+            biblioteca.FiltraTerminadasEmA(new List<string> { "Per$", "Maç4", "Banan@", "Uva.", "Uva", "Abacat!" });
+
+            Console.WriteLine("\nParâmetro nulo");
+            biblioteca.FiltraTerminadasEmA(new List<string>());
         }
     }
 }
