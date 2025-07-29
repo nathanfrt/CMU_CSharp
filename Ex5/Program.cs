@@ -18,10 +18,37 @@ namespace exercicio4
     }
     public class Program
     {
-        public static List<Usuario> IdentificaDuplicados(List<Usuario> array)
+        public static List<Usuario> IdentificaDuplicados(List<Usuario>? array)
         {
-            // Coloque seu código aqui
-            return null;
+            var users = new List<Usuario>();
+
+            try
+            {
+                if (array == null || array.Count < 1)
+                    throw new Exception("A lista não pode ser nula ou vazia");
+
+                var listaDuplicados = new List<Usuario>();
+
+                foreach (var item in array)
+                {
+                    if (users.Any(c => c.Email == item.Email))
+                        listaDuplicados.Add(item);
+
+                    users.Add(item);
+                }
+
+                if (listaDuplicados == null || listaDuplicados.Count < 1)
+                    throw new Exception($"A lista não contém E-mails duplicados");
+
+                listaDuplicados.ForEach(item => Console.WriteLine($"{item.Nome}\t{item.Email}"));
+
+                return listaDuplicados;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"ERROR: {ex.Message}");
+                return null;
+            }
         }
 
         public static void Main(string[] args)
@@ -41,8 +68,8 @@ namespace exercicio4
                 new Usuario("pedro@cmu.com.br", "Pedro Almeida"),
                 new Usuario("joaozin@cmu.com.br", "João Marcelo")}); // new List<Usuario> {Usuario{"João Carlos"}, Usuario{"João Marcelo"}}
 
-            IdentificaDuplicados(new List<Usuario> {}); // new List<Usuario> {}
-                
+            IdentificaDuplicados(new List<Usuario> { }); // new List<Usuario> {}
+
             IdentificaDuplicados(null); // ERRO
         }
     }
