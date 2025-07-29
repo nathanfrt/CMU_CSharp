@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace exercicio4
+﻿namespace exercicio4
 {
 
     public class Usuario
@@ -18,7 +16,7 @@ namespace exercicio4
     }
     public class Program
     {
-        public static List<Usuario> IdentificaDuplicados(List<Usuario>? array)
+        public static List<Usuario>? IdentificaDuplicados(List<Usuario>? array)
         {
             var users = new List<Usuario>();
 

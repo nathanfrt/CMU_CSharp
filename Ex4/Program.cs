@@ -17,7 +17,7 @@ namespace exercicio4
     }
     public class Program
     {
-        public static List<Usuario> OrdenaUsuarios(List<Usuario> array)
+        public static List<Usuario>? OrdenaUsuarios(List<Usuario> array)
         {
             var users = new List<Usuario>();
 
