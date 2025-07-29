@@ -1,6 +1,4 @@
-﻿using System.Text.RegularExpressions;
-
-namespace exercicio2
+﻿namespace exercicio2
 {
     public class Program
     {
@@ -8,25 +6,23 @@ namespace exercicio2
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(frase) || string.IsNullOrWhiteSpace(palavra))
+                if (string.IsNullOrWhiteSpace(frase) || string.IsNullOrWhiteSpace(palavra))                
+                    throw new Exception("O parâmetro 'frase' e/ou 'palavra' não pode ser vazio.");
+
+                int contador = 0, index = 0;                
+
+                while ((index = frase.IndexOf(palavra, index, StringComparison.OrdinalIgnoreCase)) != -1)
                 {
-                    Console.WriteLine("O Parâmetro 'Frase' e/ou 'Palavra' não pode ser vazio");
-                    return 0;
+                    contador++;
+                    index++; 
                 }
 
-                if (!frase.Contains(palavra))
-                {
-                    Console.WriteLine($"A palavra '{palavra}' não contém na frase '{frase}'");
-                    return 0;
-                }
-
-                var contador = Regex.Matches(frase, $@"\b{Regex.Escape(palavra)}\b", RegexOptions.IgnoreCase).Count;
-                Console.WriteLine($"A palavra '{palavra}' apareceu na frase '{frase}' {contador}x ");
+                Console.WriteLine($"A palavra '{palavra}' apareceu na frase '{frase}' {contador}x");
                 return contador;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Erro ao filtrar aparições: {ex.Message}");
+                Console.WriteLine($"ERROR: {ex.Message}");
                 return 0;
             }
 
