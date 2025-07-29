@@ -31,6 +31,12 @@ Escreva um script de consulta (SELECT), em SQL, para cada um dos enunciados abai
 
 **a) Liste o nome de todos os produtos, em ordem alfabética.** Resposta:
 
+```sql
+SELECT Nome
+FROM Produto
+ORDER BY Nome ASC;
+```
+
 |Nome|
 |:---|
 |Arame|
@@ -44,6 +50,13 @@ Escreva um script de consulta (SELECT), em SQL, para cada um dos enunciados abai
 
 **b) Liste o nome e a unidade de medida de todos os produtos, cuja unidade de medida é em gramas ou em unidades.** Resposta:
 
+```sql
+SELECT Nome, UnidadeMedida
+FROM Produto
+WHERE unidadeMedida = 'g'
+	OR unidadeMedida = 'un'
+```
+
 |Nome|UnidadeMedida|
 |:---|:---:|
 |Arroz|g|
@@ -52,6 +65,13 @@ Escreva um script de consulta (SELECT), em SQL, para cada um dos enunciados abai
 |Maçã|un|
 
 **c) Liste as unidades de medida e a quantidade de produtos que existem para cada uma.** Resposta:
+
+```sql
+SELECT UnidadeMedida, COUNT(*)
+AS Produto
+FROM Produto
+GROUP BY unidadeMedida
+```
 
 |UnidadeMedida|Produtos|
 |:---|---:|
@@ -62,6 +82,15 @@ Escreva um script de consulta (SELECT), em SQL, para cada um dos enunciados abai
 |cm2|1|
 
 **d) Liste o nome e o estoque de todos os produtos, no dia 31/12/2022 (Dica: Use "LEFT JOIN").** Resposta:
+
+```sql
+SELECT p.Nome, SUM(t.Quantidade) AS Estoque
+FROM Produto p 
+    LEFT JOIN Transacao t 
+        ON p.IdProduto = t.IdProduto 
+        AND t.Data = '2022-12-31'
+    GROUP BY p.Nome
+```
 
 |Nome|Estoque|
 |:---|---:|
