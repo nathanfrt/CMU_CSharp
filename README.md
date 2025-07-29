@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Exercícios lógicos - C#
 ## Processo Seletivo CMU Energia
 
@@ -43,3 +44,6 @@ dotnet run
 **Boa sorte!**
 
 
+=======
+# CMU_CSharp
+>>>>>>> 83ff32b702360401a80e1792cfafe05a598b177b

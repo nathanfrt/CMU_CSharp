@@ -1,6 +1,4 @@
-﻿using Ex1;
-
-namespace exercicio1
+﻿namespace exercicio1
 {
     public class Program
     {
@@ -33,9 +31,7 @@ namespace exercicio1
         }
 
         public static void Main(string[] args)
-        {
-            var biblioteca = new Biblioteca();
-            
+        {            
             FiltraTerminadasEmA(new List<string> { "Pera", "Maçã", "Banana", "Uva", "Abacate" }); // new List<string> {"Pera", "Banana", "Uva"}
             FiltraTerminadasEmA(new List<string> { "BANANA", "AZEITE", "Sacola", "MERCADO" }); // new List<string> {"BANANA", "Sacola"} 
             FiltraTerminadasEmA(new List<string> { "Caderno", "Corretivo", "Computador", "Lápis", "Marcador" });
